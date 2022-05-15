@@ -3,12 +3,11 @@ const user = useSupabaseUser()
 </script>
 
 <template>
-  <Head>
-    <Title>Supabase + Nuxt 3 Starter</Title>
-    <Link rel="icon" type="image/svg+xml" href="/supabase-logo.svg" />
-  </Head>
-
   <div class="min-h-screen bg-gray-100">
+    <Head>
+      <Title>Supabase + Nuxt 3 Starter</Title>
+      <Link rel="icon" type="image/svg+xml" href="/supabase-logo.svg" />
+    </Head>
     <nav class="font-semibold bg-indigo-700 text-white">
       <div class="flex justify-between p-4">
         <NuxtLink to="/" title="Home" class="font-bold">
@@ -16,7 +15,7 @@ const user = useSupabaseUser()
         >
 
         <ul class="flex gap-4">
-          <li>
+          <li v-if="user">
             <NuxtLink to="/profile" title="profile">{{ user.email }}</NuxtLink>
           </li>
         </ul>

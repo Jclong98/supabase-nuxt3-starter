@@ -17,7 +17,7 @@ const handleSignOut = async () => {
 </script>
 <template>
   <div class="prose mx-auto bg-white p-4 rounded-xl shadow">
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center" v-if="user">
       <h1>
         {{ user.email }}
       </h1>
