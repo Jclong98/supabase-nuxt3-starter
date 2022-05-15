@@ -25,5 +25,7 @@ const user = useSupabaseUser()
     <main class="p-4">
       <slot></slot>
     </main>
+
+    <Footer />
   </div>
 </template>

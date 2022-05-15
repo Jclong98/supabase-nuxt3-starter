@@ -26,5 +26,7 @@
     <main class="grid content-center py-4">
       <slot></slot>
     </main>
+
+    <Footer />
   </div>
 </template>
