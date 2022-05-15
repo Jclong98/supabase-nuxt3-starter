@@ -1,18 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const user = useSupabaseUser()
+</script>
 
 <template>
-  <div class="bg-emerald-100 min-h-screen">
-    <nav class="font-semibold bg-emerald-500 text-emerald-50">
-      <div class="flex justify-between p-4 mx-auto max-w-prose">
-        <NuxtLink to="/">Home</NuxtLink>
-        <ul>
+  <div class="min-h-screen bg-gray-100">
+    <nav class="font-semibold bg-indigo-700 text-white">
+      <div class="flex justify-between p-4">
+        <NuxtLink to="/" title="Home" class="font-bold">
+          Supabase + Nuxt 3 Starter</NuxtLink
+        >
+
+        <ul class="flex gap-4">
           <li>
-            <NuxtLink to="/about">About</NuxtLink>
+            <NuxtLink to="/profile" title="profile">{{ user.email }}</NuxtLink>
           </li>
         </ul>
       </div>
     </nav>
-    <main class="p-4 mx-auto max-w-prose">
+
+    <main class="p-4">
       <slot></slot>
     </main>
   </div>

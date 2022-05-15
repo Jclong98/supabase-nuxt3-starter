@@ -1,14 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/iconoir': ^1.1.5
   '@nuxtjs/supabase': ^0.1.14
   '@unocss/nuxt': ^0.33.4
   nuxt: 3.0.0-rc.3
+  prettier: ^2.6.2
+  prettier-plugin-tailwindcss: ^0.1.10
 
 devDependencies:
+  '@iconify-json/iconoir': 1.1.5
   '@nuxtjs/supabase': 0.1.14
   '@unocss/nuxt': 0.33.4
   nuxt: 3.0.0-rc.3
+  prettier: 2.6.2
+  prettier-plugin-tailwindcss: 0.1.10_prettier@2.6.2
 
 packages:
 
@@ -329,6 +335,12 @@ packages:
     resolution: {integrity: sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==}
     dependencies:
       mime: 3.0.0
+    dev: true
+
+  /@iconify-json/iconoir/1.1.5:
+    resolution: {integrity: sha512-QeSxKXbsEOE5cemoEsDxhWJMuvgUB+6+IwlsurChhfnuui4QCMTb2iIV6ZY7XMQFTJKCvkPcLYj/1QY109PG+w==}
+    dependencies:
+      '@iconify/types': 1.1.0
     dev: true
 
   /@iconify/types/1.1.0:
@@ -4070,6 +4082,21 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.1.10_prettier@2.6.2:
+    resolution: {integrity: sha512-ooDGNuXUjgCXfShliVYQ6+0iXqUFXn+zdNInPe0WZN9qINt9srbLGFGY5jeVL4MXtY20/4S8JaBcd8l6N6NfCQ==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.6.2
+    dev: true
+
+  /prettier/2.6.2:
+    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-bytes/6.0.0:

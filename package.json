@@ -7,8 +7,11 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@iconify-json/iconoir": "^1.1.5",
     "@nuxtjs/supabase": "^0.1.14",
     "@unocss/nuxt": "^0.33.4",
-    "nuxt": "3.0.0-rc.3"
+    "nuxt": "3.0.0-rc.3",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.10"
   }
 }
