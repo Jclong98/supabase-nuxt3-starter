@@ -7,14 +7,14 @@
     >
       <div class="flex items-center gap-4 justify-center md:justify-start">
         <img
-          src="/nuxt3-logo.svg"
-          alt="Nuxt 3 Logo"
+          src="/supabase-logo.svg"
+          alt="Supabase Logo"
           class="w-8 h-8 md:(w-20 h-20)"
         />
         +
         <img
-          src="/supabase-logo.svg"
-          alt="Supabase Logo"
+          src="/nuxt3-logo.svg"
+          alt="Nuxt 3 Logo"
           class="w-8 h-8 md:(w-20 h-20)"
         />
       </div>
