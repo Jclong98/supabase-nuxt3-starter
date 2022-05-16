@@ -11,8 +11,9 @@ import {
 export default defineConfig({
   shortcuts: [
     [
-      'btn',
-      'bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-lg text-center disabled:saturate-0 disabled:hover:bg-emerald-500 transition duration-200 ease-in-out',
+      /^btn-(.*)$/,
+      ([, c]) =>
+        `bg-${c}-500 hover:bg-${c}-700 text-${c}-50 py-2 px-4 rounded-lg font-bold disabled:saturate-0 disabled:hover:bg-${c}-500 transition duration-200 ease-in-out`,
     ],
   ],
   presets: [

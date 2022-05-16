@@ -23,6 +23,7 @@
         <span class="inline md:block">Nuxt 3 Starter</span>
       </h1>
     </div>
+
     <main class="grid content-center py-4">
       <slot></slot>
     </main>

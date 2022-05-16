@@ -65,7 +65,7 @@ watch(user, () => {
       />
     </label>
 
-    <button type="submit" class="btn" :disabled="!email || !password">
+    <button type="submit" class="btn-emerald" :disabled="!email || !password">
       {{ title }}
     </button>
 

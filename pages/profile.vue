@@ -23,7 +23,7 @@ const handleSignOut = async () => {
       </h1>
       <button
         title="Sign Out"
-        class="btn p-5 w-8 h-8 grid place-content-center text-white"
+        class="btn-gray p-5 w-8 h-8 grid place-content-center text-white"
         @click="handleSignOut()"
       >
         <i class="i-iconoir-log-out"></i>
