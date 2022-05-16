@@ -1,7 +1,8 @@
 <script setup lang="ts">
 const router = useRouter()
-const user = useSupabaseUser()
 const client = useSupabaseClient()
+const user = useSupabaseUser()
+const email = computed(() => user.value?.email)
 
 const handleSignOut = async () => {
   let { error } = await client.auth.signOut()
@@ -12,23 +13,23 @@ const handleSignOut = async () => {
     return alert('Something went wrong!')
   }
 
-  router.push('/signin')
+  router.push('/login')
 }
 </script>
 <template>
   <div class="prose mx-auto bg-white p-4 rounded-xl shadow">
-    <div class="flex justify-between items-center" v-if="user">
-      <h1>
-        {{ user.email }}
-      </h1>
-      <button
-        title="Sign Out"
-        class="btn-gray p-5 w-8 h-8 grid place-content-center text-white"
-        @click="handleSignOut()"
-      >
-        <i class="i-iconoir-log-out"></i>
-      </button>
-    </div>
-    <pre>{{ user }}</pre>
+    <h1>Profile</h1>
+    <p>{{ email }}</p>
+
+    <UpdatePasswordForm />
+
+    <details>
+      <summary>user data</summary>
+      <pre>{{ user }}</pre>
+    </details>
+
+    <button title="Sign Out" class="btn-gray" @click="handleSignOut()">
+      Log Out <i class="i-iconoir-log-out"></i>
+    </button>
   </div>
 </template>

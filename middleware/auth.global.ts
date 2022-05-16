@@ -3,9 +3,11 @@
 export default defineNuxtRouteMiddleware((to, from) => {
   const user = useSupabaseUser()
 
-  const isAtAuthPage = to.name === 'signin' || to.name === 'signup'
+  const authPages = ['login', 'signup', 'account-recovery']
+
+  const isAtAuthPage = authPages.includes(to.name as string)
 
   if (!user.value && !isAtAuthPage) {
-    return navigateTo('/signin')
+    return navigateTo('/login')
   }
 })

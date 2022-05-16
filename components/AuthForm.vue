@@ -1,12 +1,8 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'auth',
-})
-
 const props = defineProps({
   title: {
     type: String,
-    default: 'Sign In',
+    default: 'Log In',
   },
 })
 
@@ -16,11 +12,10 @@ const router = useRouter()
 
 const email = ref('')
 const password = ref('')
-const errorMessage = ref('')
 
 // Login method using providers
 const handleSubmit = async () => {
-  const method = props.title === 'Sign In' ? 'signIn' : 'signUp'
+  const method = props.title === 'Log In' ? 'signIn' : 'signUp'
 
   // login or signup with the provided email and password
   const { error } = await client.auth[method]({
@@ -69,13 +64,23 @@ watch(user, () => {
       {{ title }}
     </button>
 
-    <p v-if="title == 'Sign In'">
-      Need an account?
-      <NuxtLink to="/signup" class="text-blue-500 underline">Sign up</NuxtLink>
+    <p v-if="title == 'Log In'">
+      <p>
+        Need an account?
+        <NuxtLink to="/signup" class="text-blue-500 underline">
+          Sign up
+        </NuxtLink>
+      </p>
+      
+      <p>
+        <NuxtLink to="/account-recovery" class="text-blue-500 underline">
+          Forgot Your Password?
+        </NuxtLink>
+      </p>
     </p>
     <p v-else>
       Already have an account?
-      <NuxtLink to="/signin" class="text-blue-500 underline">Sign in</NuxtLink>
+      <NuxtLink to="/login" class="text-blue-500 underline">Log in</NuxtLink>
     </p>
   </form>
 </template>

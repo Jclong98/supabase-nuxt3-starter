@@ -5,5 +5,5 @@ definePageMeta({
 </script>
 
 <template>
-  <AuthForm title="Sign In" />
+  <AuthForm title="Log In" />
 </template>
